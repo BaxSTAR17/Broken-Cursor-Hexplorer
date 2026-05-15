@@ -1,0 +1,87 @@
+:root {
+    --size: 20px;
+    --width: 32;
+    --sature: 1;
+    --rotation: 0;
+    --hflip: 1;
+    --vflip: 1;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: consolas;
+}
+
+header {
+    width: 100%;
+    min-height: 100px;
+    height: fit-content;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+main.wrap {
+    width: 100%;
+    height: calc(100dvh - 100px);
+    background-color: #0f0f0f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gridbox {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 0;
+    width: calc(var(--size) * var(--width));
+    height: fit-content;
+    border: 2px solid black;
+    align-items: flex-start;
+    justify-content: flex-start;
+    rotate: calc(var(--rotation) * 1deg);
+    scale: var(--hflip) var(--vflip);
+}
+
+label, input[type="number"], span {
+    color: white;
+}
+
+input[type="number"] {
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: #1a1a1a;
+  width: 40px;
+  text-align: center;
+}
+
+.box {
+    width: var(--size);
+    height: var(--size);
+    filter: saturate(var(--sature));
+}
+
+.checked {
+    background-color: #4a4a
+}
+
+button {
+    font-family: consolas;
+    background-color: #1a1a1a;
+    color: white;
+} 
+
+button:hover {
+    border-color: #2a2a2a;
+    cursor: pointer;
+} 
+button:active {
+    background-color: #4a4a4a;
+    translate: 0px 2px;
+}

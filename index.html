@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filian Broken Cursor Hex Colorbox</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <label for="slider">Width:</label>
+        <input type="number" id="bits" max="100" min="1" value="32" oninput="onType(document.getElementById('bits').value)"></input>
+        <input type="range" name="slider" id="slider" max="100" min="1" value="32"
+        oninput="onSlide(document.getElementById('slider').value)">
+        <span>|</span>
+        <button onclick="onRotate(90)">Rotate +90deg</button>
+        <button onclick="onRotate(-90)">Rotate -90deg</button>
+        <span>|</span>
+        <button id="vflip" onclick="onFlip('v')">Vertical Invert</button>
+        <button id="hflip" onclick="onFlip('h')">Horizontal Invert</button>
+        <span>|</span>
+        <label for="sature">Saturation:</label>
+        <input type="number" id="saturation" max="100" min="0" value="100" oninput="onSaturate(document.getElementById('saturation').value)"></input>
+        <input type="range" name="sature" id="sature" max="100" min="0" value="100"
+        oninput="onSaturate(document.getElementById('sature').value)">
+        <span>|</span>
+        <button onclick="reset()">Reset</button>
+    </header>
+    <main class="wrap">
+        <div class="gridbox"></div>
+    </main>
+</body>
+<script src="./script.js" defer></script>
+</html>
